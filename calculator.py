@@ -33,25 +33,45 @@ def calculator(num1, num2, operator):
         print(f"The result is: {result}")
     elif operator == "-":
         result = num1 - num2
-
+        print(f"The result is: {result}")
+   
     # Function implementation here ...
-
-
-def calculator(num1,num2,operator):
-    if operator == "*":
-        result = 4 * 5
-        print (f"The result is:{result}")
+    elif num2 == 0 and operator == "/":
+        print("invalid syntax")
+    elif num2 == 0 and operator == "%":
+        print("invalid syntax")
     elif operator == "/":
-        result = 10 / 2
+        result = num1 / num2
+        print(f"The result is: {result}")
+    elif operator == "*":
+        result = num1 * num2
+        print(f"The result is: {result}")
+    elif operator == "%":
+        result = num1 % num2
+        print(f"The result is: {result}")
+    elif operator == ">":
+        result = num1 > num2
+        print(f"The comparison result is: {result}")
+    elif operator == ">=":
+        result = num1 >= num2
+        print(f"The comparison result is: {result}")
+    elif operator == "<":
+        result = num1 < num2
+        print(f"The comparison result is: {result}")
+    elif operator == "<=" :
+        result = num1 <= num2
+        print(f"The comparison result is: {result}")
+    else:
+        print("invalid operator")
     return result
-calculator(4,5,"*")
-
-
-print("State")
-
 
 
 ## Run the example
-# calculator(4, 5, "*")  # Output: The result is: 20
-# calculator(10, 2, "/")  # Output: The result is: 5.0
-# calculator(7, 7, ">=")  # Output: The comparison result is: True
+calculator(4, 5, "*")  # Output: The result is: 20
+calculator(10, 2, "/")  # Output: The result is: 5.0
+calculator(7, 7, ">=")  # Output: The comparison result is: True
+
+calculator(5,5,"%") #The result is: 0
+calculator(10,20,"<") # The result is: True
+calculator(20,10,"<=") # The result is: False
+calculator(10,0, "/") # ZeroDivisionError: division by zero 
